@@ -45,6 +45,7 @@ use ITHolidays\Traits\Holidays\Thanksgiving;
 use ITHolidays\Traits\Holidays\ValentinesDay;
 use ITHolidays\Traits\Holidays\VeteransDay;
 use ITHolidays\Traits\Holidays\YomKippur;
+use ITHolidays\Traits\Holidays\Epiphany;
 
 trait Holiday
 {
@@ -90,6 +91,7 @@ trait Holiday
     use ValentinesDay;
     use VeteransDay;
     use YomKippur;
+    use Epiphany;
 
     /**
      * Get holiday data
@@ -729,6 +731,20 @@ trait Holiday
                 'federal_holiday_start_year' => null,
                 'federal_holiday_end_year' => null,
             ),
+            array(
+                'name' => "Epiphany",
+                'date' => function() use ($year) {
+                    return $this->setEpiphany($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => null,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            )
         );
 
         foreach ($holidays as $key => $holiday) {
