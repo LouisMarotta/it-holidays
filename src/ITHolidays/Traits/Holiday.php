@@ -738,7 +738,7 @@ trait Holiday
                 },
                 'bank_holiday' => true,
                 'federal_holiday' => true,
-                'start_year' => null,
+                'start_year' => 1990,
                 'end_year' => null,
                 'bank_holiday_start_year' => null,
                 'bank_holiday_end_year' => null,
