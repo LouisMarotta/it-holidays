@@ -733,6 +733,7 @@ trait Holiday
             ),
             array(
                 'name' => "Epiphany",
+                'search_names' => ["EPIPHANY"],
                 'date' => function() use ($year) {
                     return $this->setEpiphany($year);
                 },
