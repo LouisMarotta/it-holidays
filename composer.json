@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "USHolidays\\": "src/USHolidays"
+            "ITHoliday\\": "src/ITHoliday"
         }
     },
     "autoload-dev": {
