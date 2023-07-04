@@ -3,7 +3,7 @@
 namespace Tests\Holidays\PearlHarborRemembranceDay;
 
 use PHPUnit\Framework\TestCase;
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 class PearlHarborRemembranceDayTest extends TestCase
 {

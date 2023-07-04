@@ -3,10 +3,10 @@
  * US Holidays Wrapper for the Carbon DateTime Library
  */
 
-namespace USHolidays;
+namespace ITHolidays;
 
-use USHolidays\Traits\Holiday;
-use USHolidays\Traits\BusinessDays;
+use ITHolidays\Traits\Holiday;
+use ITHolidays\Traits\BusinessDays;
 use Exception;
 
 /**

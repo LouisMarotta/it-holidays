@@ -3,7 +3,7 @@
 namespace Tests\Holidays\ArmedForcesDay;
 
 use PHPUnit\Framework\TestCase;
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 class ArmedForcesDayTest extends TestCase
 {

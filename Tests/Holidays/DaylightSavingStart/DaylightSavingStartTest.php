@@ -3,7 +3,7 @@
 namespace Tests\Holidays\DaylightSavingStart;
 
 use PHPUnit\Framework\TestCase;
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 class DaylightSavingStartTest extends TestCase
 {

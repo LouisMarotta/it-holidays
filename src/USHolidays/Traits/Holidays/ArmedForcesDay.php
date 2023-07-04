@@ -1,8 +1,8 @@
 <?php
 
-namespace USHolidays\Traits\Holidays;
+namespace ITHolidays\Traits\Holidays;
 
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 trait ArmedForcesDay
 {

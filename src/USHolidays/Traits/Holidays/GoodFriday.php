@@ -1,6 +1,6 @@
 <?php
 
-namespace USHolidays\Traits\Holidays;
+namespace ITHolidays\Traits\Holidays;
 
 trait GoodFriday
 {

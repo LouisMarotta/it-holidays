@@ -3,7 +3,7 @@
 namespace Tests\Holidays\CincoDeMayo;
 
 use PHPUnit\Framework\TestCase;
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 class CincoDeMayoTest extends TestCase
 {

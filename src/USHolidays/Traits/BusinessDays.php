@@ -1,6 +1,6 @@
 <?php
 
-namespace USHolidays\Traits;
+namespace ITHolidays\Traits;
 
 trait BusinessDays
 {

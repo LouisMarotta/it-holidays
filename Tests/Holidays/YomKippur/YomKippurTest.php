@@ -3,7 +3,7 @@
 namespace Tests\Holidays\YomKippur;
 
 use PHPUnit\Framework\TestCase;
-use USHolidays\Carbon;
+use ITHolidays\Carbon;
 
 class YomKippurTest extends TestCase
 {
