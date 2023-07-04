@@ -23,6 +23,6 @@ trait Epiphany
      */
     public function getEpiphany(int $year = null)
     {
-        return $this->getHolidaysByYear("Ephipany", $year)[0];
+        return $this->getHolidaysByYear("Epiphany", $year)[0];
     }
 }
