@@ -2,6 +2,8 @@
 
 namespace ITHolidays\Traits\Holidays;
 
+use ITHolidays\Carbon;
+
 trait RepublicDay
 {
     /**
