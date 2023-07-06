@@ -17,7 +17,6 @@ trait LaborDay
         if( $date->dayOfWeek !== Carbon::MONDAY ) {
             $date->next(Carbon::MONDAY);
         }
-
         return $date;
     }
 
