@@ -18,7 +18,7 @@ trait Easter
         $date = Carbon::create($year, $days["month"], $days["day"], 0, 0, 0);
         // $days = easter_days($year);
 
-        return $date->addDays($days);
+        return $date;
     }
 
     function calculateEasterDate($year)
