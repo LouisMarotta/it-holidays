@@ -4,23 +4,30 @@ namespace ITHolidays\Traits;
 
 use ITHolidays\Carbon;
 
+use ITHolidays\Traits\Holidays\AllSaintsDay;
 use ITHolidays\Traits\Holidays\ChristmasDay;
-use ITHolidays\Traits\Holidays\ChristmasEve;
 use ITHolidays\Traits\Holidays\Easter;
-use ITHolidays\Traits\Holidays\LaborDay;
-use ITHolidays\Traits\Holidays\NewYearsDay;
-use ITHolidays\Traits\Holidays\PalmSunday;
 use ITHolidays\Traits\Holidays\Epiphany;
+use ITHolidays\Traits\Holidays\Ferragosto;
+use ITHolidays\Traits\Holidays\ImmaculateConception;
+use ITHolidays\Traits\Holidays\InternationalWorkersDay;
+use ITHolidays\Traits\Holidays\NewYearsDay;
+use ITHolidays\Traits\Holidays\RepublicDay;
+use ITHolidays\Traits\Holidays\StStephenDay;
+
 
 trait Holiday
 {
+    use AllSaintsDay;
     use ChristmasDay;
-    use ChristmasEve;
     use Easter;
-    use LaborDay;
-    use NewYearsDay;
-    use PalmSunday;
     use Epiphany;
+    use Ferragosto;
+    use ImmaculateConception;
+    use InternationalWorkersDay;
+    use NewYearsDay;
+    use RepublicDay;
+    use StStephenDay;
 
     /**
      * Get holiday data
@@ -30,6 +37,21 @@ trait Holiday
     private function holidays(int $year = null ) {
         $this->setTime(0,0,0);
         $holidays = array(
+            array(
+                'name' => "All Saints' Day",
+                'search_names' => ["ALL SAINTS DAY"],
+                'date' => function() use ($year) {
+                    return $this->setAllSaintsDay($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => 835,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
             array(
                 'name' => "Christmas Day",
                 'search_names' => ["CHRISTMAS DAY", "CHRISTMAS"],
@@ -46,21 +68,6 @@ trait Holiday
                 'federal_holiday_end_year' => null,
             ),
             array(
-                'name' => "Christmas Eve",
-                'search_names' => ["CHRISTMAS EVE"],
-                'date' => function() use ($year) {
-                    return $this->setChristmasEve($year);
-                },
-                'bank_holiday' => false,
-                'federal_holiday' => false,
-                'start_year' => 336,
-                'end_year' => null,
-                'bank_holiday_start_year' => null,
-                'bank_holiday_end_year' => null,
-                'federal_holiday_start_year' => null,
-                'federal_holiday_end_year' => null,
-            ),
-            array(
                 'name' => "Easter",
                 'search_names' => ["EASTER"],
                 'date' => function() use ($year) {
@@ -69,66 +76,6 @@ trait Holiday
                 'bank_holiday' => false,
                 'federal_holiday' => false,
                 'start_year' => 300,
-                'end_year' => null,
-                'bank_holiday_start_year' => null,
-                'bank_holiday_end_year' => null,
-                'federal_holiday_start_year' => null,
-                'federal_holiday_end_year' => null,
-            ),
-            array(
-                'name' => "Labor Day",
-                'search_names' => ["LABOR DAY"],
-                'date' => function() use ($year) {
-                    return $this->setLaborDay($year);
-                },
-                'bank_holiday' => true,
-                'federal_holiday' => true,
-                'start_year' => 1882,
-                'end_year' => null,
-                'bank_holiday_start_year' => 1894,
-                'bank_holiday_end_year' => null,
-                'federal_holiday_start_year' => 1894,
-                'federal_holiday_end_year' => null,
-            ),
-            array(
-                'name' => "New Year's Day",
-                'search_names' => ["NEW YEAR'S DAY", "NEW YEARS DAY", "NEW YEARS"],
-                'date' => function() use ($year) {
-                    return $this->setNewYearsDay($year);
-                },
-                'bank_holiday' => true,
-                'federal_holiday' => true,
-                'start_year' => -2000,
-                'end_year' => null,
-                'bank_holiday_start_year' => 1885,
-                'bank_holiday_end_year' => null,
-                'federal_holiday_start_year' => 1885,
-                'federal_holiday_end_year' => null,
-            ),
-            array(
-                'name' => "New Year's Eve",
-                'search_names' => ["NEW YEAR'S EVE", "NEW YEARS EVE"],
-                'date' => function() use ($year) {
-                    return $this->setNewYearsEve($year);
-                },
-                'bank_holiday' => false,
-                'federal_holiday' => false,
-                'start_year' => -2000,
-                'end_year' => null,
-                'bank_holiday_start_year' => null,
-                'bank_holiday_end_year' => null,
-                'federal_holiday_start_year' => null,
-                'federal_holiday_end_year' => null,
-            ),
-            array(
-                'name' => "Palm Sunday",
-                'search_names' => ["PALM SUNDAY"],
-                'date' => function() use ($year) {
-                    return $this->setPalmSunday($year);
-                },
-                'bank_holiday' => false,
-                'federal_holiday' => false,
-                'start_year' => 500,
                 'end_year' => null,
                 'bank_holiday_start_year' => null,
                 'bank_holiday_end_year' => null,
@@ -149,7 +96,97 @@ trait Holiday
                 'bank_holiday_end_year' => null,
                 'federal_holiday_start_year' => null,
                 'federal_holiday_end_year' => null,
-            )
+            ),
+            array(
+                'name' => "Ferragosto",
+                'search_names' => ["FERRAGOSTO"],
+                'date' => function() use ($year) {
+                    return $this->setFerragosto($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => -18,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "Immaculate Conception",
+                'search_names' => ["IMMACULATE CONCEPTION"],
+                'date' => function() use ($year) {
+                    return $this->setImmaculateConception($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => 1854,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "International Worker's Day",
+                'search_names' => ["INTERNATIONAL WORKERS DAY", "WORKERS DAY"],
+                'date' => function() use ($year) {
+                    return $this->setInternationalWorkersDay($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => 1890,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "New Year's Day",
+                'search_names' => ["NEW YEAR'S DAY", "NEW YEARS DAY", "NEW YEARS"],
+                'date' => function() use ($year) {
+                    return $this->setNewYearsDay($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => -2000,
+                'end_year' => null,
+                'bank_holiday_start_year' => 1885,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => 1885,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "Republic Day",
+                'search_names' => ["REPUBLIC DAY"],
+                'date' => function() use ($year) {
+                    return $this->setRepublicDay($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => 1946,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "Saint Stephen's Day",
+                'search_names' => ["SAINT STEPHENS DAY", "ST STEPHENS DAY", "ST STEPHENS"],
+                'date' => function() use ($year) {
+                    return $this->setStStephenDay($year);
+                },
+                'bank_holiday' => true,
+                'federal_holiday' => true,
+                'start_year' => 1947,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
         );
 
         foreach ($holidays as $key => $holiday) {
