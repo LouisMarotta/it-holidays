@@ -21,7 +21,7 @@ class Carbon extends \Carbon\Carbon {
      * An array of all the names of the holidays
      */
     private $holidayArray = [
-        "Christmas Day","Christmas Eve","Easter","Labor Day","New Year's Day",
+        "Christmas Day","Christmas Eve","Easter", "Easter Monday", "Easter Monday", "Labor Day","New Year's Day",
         "Epiphany", "Saint Stephen's Day", "Republic Day", "International Worker's Day", "Immaculate Conception", "Ferragosto", "All Saints' Day"
     ];
 

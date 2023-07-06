@@ -7,6 +7,7 @@ use ITHolidays\Carbon;
 use ITHolidays\Traits\Holidays\AllSaintsDay;
 use ITHolidays\Traits\Holidays\ChristmasDay;
 use ITHolidays\Traits\Holidays\Easter;
+use ITHolidays\Traits\Holiday\EasterMonday;
 use ITHolidays\Traits\Holidays\Epiphany;
 use ITHolidays\Traits\Holidays\Ferragosto;
 use ITHolidays\Traits\Holidays\ImmaculateConception;
@@ -21,6 +22,7 @@ trait Holiday
     use AllSaintsDay;
     use ChristmasDay;
     use Easter;
+    use EasterMonday;
     use Epiphany;
     use Ferragosto;
     use ImmaculateConception;
@@ -72,6 +74,21 @@ trait Holiday
                 'search_names' => ["EASTER"],
                 'date' => function() use ($year) {
                     return $this->setEaster($year);
+                },
+                'bank_holiday' => false,
+                'federal_holiday' => false,
+                'start_year' => 300,
+                'end_year' => null,
+                'bank_holiday_start_year' => null,
+                'bank_holiday_end_year' => null,
+                'federal_holiday_start_year' => null,
+                'federal_holiday_end_year' => null,
+            ),
+            array(
+                'name' => "Easter Monday",
+                'search_names' => ["EASTER MONDAY"],
+                'date' => function() use ($year) {
+                    return $this->setEasterMonday($year);
                 },
                 'bank_holiday' => false,
                 'federal_holiday' => false,
