@@ -7,7 +7,7 @@ use ITHolidays\Carbon;
 use ITHolidays\Traits\Holidays\AllSaintsDay;
 use ITHolidays\Traits\Holidays\ChristmasDay;
 use ITHolidays\Traits\Holidays\Easter;
-use ITHolidays\Traits\Holiday\EasterMonday;
+use ITHolidays\Traits\Holidays\EasterMonday;
 use ITHolidays\Traits\Holidays\Epiphany;
 use ITHolidays\Traits\Holidays\Ferragosto;
 use ITHolidays\Traits\Holidays\ImmaculateConception;
