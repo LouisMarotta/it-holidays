@@ -21,7 +21,7 @@ trait EasterMonday
         return $date->addDays($days + 1);
     }
     
-    function calculateEasterDate($year)
+    function calculateEasterMondayDate($year)
     {
         $a = $year % 19;
         $b = (int) ($year / 100);
